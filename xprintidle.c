@@ -33,17 +33,17 @@ unsigned long getIdleTime()
 
   dpy = XOpenDisplay(NULL);
   if (dpy == NULL) {
-    fprintf(stderr, "Couldn't open display\n");
+    //fprintf(stderr, "Couldn't open display\n");
     return -1;
   }
   
   if (!XScreenSaverQueryExtension(dpy, &event_basep, &error_basep)) {
-    fprintf(stderr, "Screen saver extension not supported\n");
+    //fprintf(stderr, "Screen saver extension not supported\n");
     return -1;
   }
   
   if (!XScreenSaverQueryInfo(dpy, DefaultRootWindow(dpy), &ssi)) {
-    fprintf(stderr, "Couldn't query screen saver info\n");
+    //fprintf(stderr, "Couldn't query screen saver info\n");
     return -1;
   }
   
